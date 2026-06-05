@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>いちご情報</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <div id="content">読み込み中...</div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get("id");
+
+    fetch(`https://clvgqhwynzclrpdjyyjf.supabase.co/functions/v1/strawberry?id=${id}`)
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById("content").innerHTML = html;
+      })
+      .catch(err => {
+        document.getElementById("content").innerHTML = "エラーが発生しました";
+      });
+  </script>
+</body>
+</html>
