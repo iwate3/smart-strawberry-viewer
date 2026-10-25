@@ -13,7 +13,7 @@
     const params = new URLSearchParams(window.location.search);
     const id = params.get("id");
 
-    fetch(`https://clvgqhwynzclrpdjyyjf.supabase.co/functions/v1/strawberry?id=${id}`)
+    fetch(`https://clvgqhwynzclrpdjyyjf.supabase.co/functions/v1/strawberry_R08?id=${id}`)
       .then(res => res.text())
       .then(html => {
         document.getElementById("content").innerHTML = html;
