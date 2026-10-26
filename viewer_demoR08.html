@@ -35,7 +35,7 @@
 
     document.getElementById("forms-link").href = FORMS_URL;
 
-    fetch(`https://clvgqhwynzclrpdjyyjf.supabase.co/functions/v1/strawberry?id=${id}`)
+    fetch(`https://clvgqhwynzclrpdjyyjf.supabase.co/functions/v1/strawberry_R08?id=${id}`)
       .then(res => res.text())
       .then(html => {
         document.getElementById("content").innerHTML = html;
